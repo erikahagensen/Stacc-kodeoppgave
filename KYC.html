@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- stylesheet  -->
+	<link href="style.css" type="text/css" rel="stylesheet" >
+	<link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>KYC</title>
+</head>
+<body>
+
+
+<!-- Søkeknapp -->
+<div class="background-img">
+	<br><br><br><br><br><br><br><br><br><br><br><br>
+  	<form class="searchbar" style="margin:auto;max-width:900px" action="KYC1.html">
+  	<input id="input1" type="text" placeholder="Søk etter navn" name="search">
+ 	<button type="button" onclick="showResult(search())" name="button"><i class="fa fa-search">
+ 	</i> </button>
+  </form>
+</div>
+
+
+<!-- prøver å lage en søkeknapp som fungerer-->
+<script>
+
+function search() {
+	var input1 = document.getElementById("input1").value;
+
+	if  (input1 == "Knut") {
+		return "Personen du søker etter regnes som en PEP";
+	} else {
+		return "Personen du søker etter regnes IKKE som PEP"
+	}
+}
+
+function showResult (output) {
+	document.getElementById("output").innerHTML =  output;
+}
+
+</script>
+
+<!--Navigasjonsbar uten funksjon-->
+<div class="navbar">
+  <a href="#" class="active">Hjem</a>
+  <a href="#">Om oss</a>
+  <a href="#">Kontakt</a>
+</div>
+
+<br><br><br>
+
+
+<div class="row">
+  <div class="side">
+    <h2>Om tjenesten</h2>
+    <h5>Tjenesten er levert av ... og er koblet opp mot <a href="https://www.brreg.no/">Brønnøysundsregisteret.</a></h5>
+    <img src="brreg.png" alt="bilde fra brreg" style="height:250px;">
+  </div>
+  <div class="main">
+  	<h2>PEP-sjekk av personer</h2>
+    <h5>Know Your Customer</h5>
+    <p>KYC eller “know your customer” er virkemidler som sikrer at et finansforetak vet nok om sine kunder til å forhindre og avdekke om det finansielle systemet brukes til ulovlig virksomhet, som hvitvasking, korrupsjon og terrorfinansiering. Et av disse virkemidlene er å utføre en PEP-sjekk (Politically Exposed Person) av kunder. En politisk eksponert person har generelt sett større risiko for korrupsjon og bestikkelser knyttet til seg, og vil dermed være flagget for manuell behandling i f.eks en lånesøknad hos en bank.</p>
+    <br>
+</div>
+
+
+</body>
+</html>
